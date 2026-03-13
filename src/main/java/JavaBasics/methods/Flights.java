@@ -1,4 +1,4 @@
-package AmazonPay;
+package JavaBasics.methods;
 
 public class Flights {
 

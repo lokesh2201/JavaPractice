@@ -1,4 +1,4 @@
-package JavaBasics;
+package JavaBasics.Class;
 
 public class ClassConcept {
 
