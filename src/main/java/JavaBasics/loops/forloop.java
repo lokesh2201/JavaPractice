@@ -1,24 +1,107 @@
 package JavaBasics.loops;
+import java.util.Scanner;
 
 public class forloop {
 
     public static void main(String[] args){
-        ForLoop();
+        int N = ReadNumber();
+        ForLoop(N);
     }
 
-    public static void ForLoop(){
-        int sum = 0;
-        for (int i=0; i<=3; i++){
-            for (int j=0; j<=3; j++){
-                System.out.print(i);
-                System.out.print(" ");
-                System.out.print(j);
-                System.out.print(" ");
+    public static int ReadNumber(){
+        Scanner S = new Scanner(System.in);
+        return S.nextInt();
+    }
+    public static void ForLoop(int n){
 
-//                System.out.println(i);
-//                System.out.println(j);
+        /* Sandglass
+        for (int i=1; i<n; i++){ // Rows
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print(" ");
             }
+            for (int j=i; j<=n; j++){ // Columns
+                System.out.print("* ");
+            }
+            System.out.println();
         }
+        for (int i=1; i<=n; i++){ // Rows
+            for (int j=i; j<=n; j++){ // Columns
+                System.out.print(" ");
+            }
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print("* ");
+            }
+            System.out.println();
+        }*/
+        /* Diamond
+        for (int i=1; i<n; i++){ // Rows
+            for (int j=i; j<=n; j++){ // Columns
+                System.out.print(" ");
+            }
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i=1; i<=n; i++){ // Rows
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print(" ");
+            }
+            for (int j=i; j<=n; j++){ // Columns
+                System.out.print("* ");
+            }
+            System.out.println();
+        }*/
+        /* Double Hill
+        for (int i=1; i<=n; i++){ // Rows
+            for (int j=i; j<=n; j++){ // Columns
+                System.out.print(" ");
+            }
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print("* ");
+            }
+            for (int j=i; j<n; j++){ // Columns
+                System.out.print("  ");
+            }
 
+            for (int j=1; j<=i; j++){ // Columns
+                System.out.print("* ");
+            }
+            System.out.println();
+        }*/
+
+        /* ButterFly */
+        //Upperpart
+        for (int i=1; i<n; i++) { // Rows
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            for (int j=i; j<n; j++){
+                System.out.print(" ");
+            }
+            for (int j=i; j<n; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //Lowerpart
+        for (int i=n; i>=1; i--) { // Rows
+            for (int j=1; j<=i; j++) {
+                System.out.print("*");
+            }
+            for (int j=i; j<n; j++){
+                System.out.print(" ");
+            }
+            for (int j=i; j<n; j++){
+                System.out.print(" ");
+            }
+            for (int j=1; j<=i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
